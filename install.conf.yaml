@@ -1,0 +1,26 @@
+- defaults:
+    link:
+      relink: true
+      force: true
+      create: true
+
+- clean: ['~']
+
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      recursive: true
+        
+- link:
+    ~/.bashrc: 
+      path: bashrc
+
+    ~/.zshrc: 
+      path: zshrc
+
+    ~/.config/nvim:
+      path: nvim
+
+    ~/.config/alacritty:
+      path: alacritty
