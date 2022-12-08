@@ -23,7 +23,8 @@ export NVM_DIR="$HOME/.nvm"
 
 ################################################################ User configs #########################################
 # Path to your oh-my-zsh installation.
-export ZSH="/home/valti/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
 
 # Set name of the theme to load:
 ZSH_THEME="jonathan"
@@ -36,7 +37,6 @@ ZSH_COLORIZE_STYLE="colorful"
 # Which plugins would you like to load?
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete colorize)
 
-source $ZSH/oh-my-zsh.sh
 
 # Aliases (you have to refresh your terminal by either exiting out or running the following command: source ~/.zshrc)
 alias vim="nvim"
