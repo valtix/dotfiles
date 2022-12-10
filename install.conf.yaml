@@ -13,9 +13,6 @@
       recursive: true
         
 - link:
-    ~/.bashrc: 
-      path: bashrc
-
     ~/.zshrc: 
       path: zshrc
 
