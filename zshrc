@@ -1,3 +1,5 @@
+export ZSH=$HOME/.oh-my-zsh
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -22,10 +24,6 @@ export NVM_DIR="$HOME/.nvm"
 
 
 ################################################################ User configs #########################################
-# Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
-
 # Set name of the theme to load:
 ZSH_THEME="jonathan"
 ZSH_COLORIZE_STYLE="colorful"
@@ -35,7 +33,15 @@ ZSH_COLORIZE_STYLE="colorful"
 
 
 # Which plugins would you like to load?
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete colorize)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting F-Sy-H zsh-autocomplete colorize)
+
+# 	Make sure this stays at the bottom in order for the syntax 
+# highlighting plugin to work!
+# Custom oh-my-zsh for plugins & themes:
+ZSH_CUSTOM=$HOME/.dotfiles/oh-my-zsh-customizations/
+# Path to your oh-my-zsh installation.
+#
+source $ZSH/oh-my-zsh.sh
 
 
 # Aliases (you have to refresh your terminal by either exiting out or running the following command: source ~/.zshrc)
