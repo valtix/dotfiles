@@ -1,5 +1,3 @@
-export ZSH=$HOME/.oh-my-zsh
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -22,29 +20,39 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+################################################################################################################
+#####################################################    ANTIGEN     ###########################################
+################################################################################################################
+source $HOME/.dotfiles/antigen.zsh
 
-################################################################ User configs #########################################
-# Set name of the theme to load:
-ZSH_THEME="jonathan"
-ZSH_COLORIZE_STYLE="colorful"
+# Use Oh-My-Zsh
+antigen use oh-my-zsh
 
-# Uncomment the following line to use case-sensitive completion.
- CASE_SENSITIVE="true"
+# Set theme
+antigen theme agnoster
 
-
-# Which plugins would you like to load?
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting F-Sy-H zsh-autocomplete colorize)
-
-# 	Make sure this stays at the bottom in order for the syntax 
-# highlighting plugin to work!
-# Custom oh-my-zsh for plugins & themes:
-ZSH_CUSTOM=$HOME/.dotfiles/oh-my-zsh-customizations/
-# Path to your oh-my-zsh installation.
-#
-source $ZSH/oh-my-zsh.sh
+# Set plugins (plugins not part of Oh-My-Zsh can be installed using githubusername/repo)
+antigen bundle git
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle z-shell/F-Sy-H --branch=main
+antigen bundle marlonrichert/zsh-autocomplete@main
 
 
-# Aliases (you have to refresh your terminal by either exiting out or running the following command: source ~/.zshrc)
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    antigen bundle osx
+fi
+
+# Apply changes
+antigen apply
+
+
+
+
+################################################################################################################
+#####################################################    ALIASES     ###########################################
+################################################################################################################
+source $HOME/.dotfiles/antigen.zsh
 alias vim="nvim"
 alias lt="exa --tree --level=2 -a --icons"
 alias l="exa --tree --level=1 --icons"
