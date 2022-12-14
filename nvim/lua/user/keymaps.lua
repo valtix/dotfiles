@@ -36,8 +36,8 @@ keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-s>", ":w<CR>", opts)			                -- Ctrl + s to save file in normal mode
 
-keymap("n", "<C-s>", ":w<CR>", opts)			-- Ctrl + s to save a file
 
 
 ----------------------------------------------
@@ -46,3 +46,4 @@ keymap("n", "<C-s>", ":w<CR>", opts)			-- Ctrl + s to save a file
 
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+keymap("i", "<C-s>", "<Esc>:w<CR>i", opts)		                -- Ctrl + s to save file in insert mode

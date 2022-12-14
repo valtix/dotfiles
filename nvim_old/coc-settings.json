@@ -1,8 +1,0 @@
-{
-"snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
-"coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "html"],
-"prettier.tabWidth": 4
-}
-
-
-
