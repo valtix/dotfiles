@@ -1,7 +1,13 @@
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.colorscheme"
-require "user.cmp"
-require "user.lualine"
-require "user.vim-tree"
+require("user.options")
+require("user.keymaps")
+require("user.plugins")
+require("user.colorscheme")
+require("user.lualine")
+require("user.vim-tree")
+require("user.nvim-cmp")
+require("user.lsp.mason")
+require("user.lsp.lspconfig")
+require("user.lsp.lspsaga")
+require("user.lsp.null-ls")
+require("user.autopairs")
+require("user.treesitter")
