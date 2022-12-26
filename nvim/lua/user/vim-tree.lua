@@ -1,4 +1,12 @@
-require("nvim-tree").setup({
+local status_ok, nvim_tree = pcall(require, "nvim-tree")
+if not status_ok then
+	return
+end
+
+-- set termguicolors to enable highlight group
+vim.opt.termguicolors = true
+
+nvim_tree.setup({
 	auto_reload_on_write = true,
 	disable_netrw = true,
 	hijack_cursor = false,
@@ -19,7 +27,7 @@ require("nvim-tree").setup({
 	view = {
 		adaptive_size = false,
 		centralize_selection = false,
-		width = 55,
+		width = 30,
 		hide_root_folder = false,
 		side = "left",
 		preserve_window_proportions = false,
@@ -102,5 +110,96 @@ require("nvim-tree").setup({
 		},
 		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
 		symlink_destination = true,
+	},
+	hijack_directories = {
+		enable = true,
+		auto_open = true,
+	},
+	update_focused_file = {
+		enable = false,
+	},
+	ignore_ft_on_setup = {},
+	system_open = {
+		cmd = "",
+		args = {},
+	},
+	diagnostics = {
+		enable = false,
+		show_on_dirs = false,
+		show_on_open_dirs = true,
+		debounce_delay = 50,
+		severity = {
+			min = vim.diagnostic.severity.HINT,
+			max = vim.diagnostic.severity.ERROR,
+		},
+		icons = {
+			hint = "",
+			info = "",
+			warning = "",
+			error = "",
+		},
+	},
+	filters = {
+		dotfiles = false,
+		git_clean = false,
+		no_buffer = false,
+		custom = {},
+		exclude = {},
+	},
+	filesystem_watchers = {
+		enable = true,
+		debounce_delay = 50,
+		ignore_dirs = {},
+	},
+	git = {
+		enable = true,
+		ignore = true,
+		show_on_dirs = true,
+		show_on_open_dirs = true,
+		timeout = 400,
+	},
+	actions = {
+		use_system_clipboard = true,
+		change_dir = {
+			enable = true,
+			global = false,
+			restrict_above_cwd = false,
+		},
+		expand_all = {
+			max_folder_discovery = 300,
+			exclude = {},
+		},
+		file_popup = {
+			open_win_config = {
+				col = 1,
+				row = 1,
+				relative = "cursor",
+				border = "shadow",
+				style = "minimal",
+			},
+		},
+		open_file = {
+			quit_on_open = false,
+			resize_window = true,
+			window_picker = { enable = true },
+		},
+		remove_file = {
+			close_window = true,
+		},
+	},
+	trash = {
+		cmd = "gio trash",
+		require_confirm = true,
+	},
+	live_filter = {
+		prefix = "[FILTER]: ",
+		always_show_folders = true,
+	},
+	tab = {
+		sync = {
+			open = false,
+			close = false,
+			ignore = {},
+		},
 	},
 })
