@@ -4,16 +4,16 @@
       force: true
       create: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - clean:
     ~/:
       force: true
     ~/.config:
       recursive: true
-        
+
 - link:
-    ~/.zshrc: 
+    ~/.zshrc:
       path: zshrc
 
     ~/.config/nvim:
@@ -21,3 +21,6 @@
 
     ~/.config/alacritty:
       path: alacritty
+
+    ~/Wallpaper:
+      path: wallpaper
