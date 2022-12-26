@@ -45,10 +45,19 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 	use("nvim-lualine/lualine.nvim") -- Statusline
-	use("nvim-tree/nvim-tree.lua") -- File explorer
+	use({
+		"nvim-tree/nvim-tree.lua",
+		requires = {
+			"nvim-tree/nvim-web-devicons", -- optional, for file icons
+		},
+		tag = "nightly", -- optional, updated every week. (see issue #1193)
+	})
 
 	-- Colorschemes
 	use("morhetz/gruvbox")
+
+	-- Transaprent Backgrounds:
+	use("xiyaowong/nvim-transparent")
 
 	-- Auto-completion
 	use("hrsh7th/nvim-cmp")
