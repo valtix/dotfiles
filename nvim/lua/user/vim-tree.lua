@@ -27,7 +27,7 @@ nvim_tree.setup({
 	view = {
 		adaptive_size = false,
 		centralize_selection = false,
-		width = 30,
+		width = 120,
 		hide_root_folder = false,
 		side = "left",
 		preserve_window_proportions = false,
@@ -124,8 +124,8 @@ nvim_tree.setup({
 		args = {},
 	},
 	diagnostics = {
-		enable = false,
-		show_on_dirs = false,
+		enable = true,
+		show_on_dirs = true,
 		show_on_open_dirs = true,
 		debounce_delay = 50,
 		severity = {

@@ -24,3 +24,6 @@
 
     ~/Wallpaper:
       path: wallpaper
+
+    ~/.tmux.conf:
+      path: tmux.conf
