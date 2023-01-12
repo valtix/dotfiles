@@ -63,3 +63,5 @@
     - On linux unzip -> double click -> and you should see an option to install. You might have to google it if this is not the case
 14. Install live-server:
     - npm install -g live-server
+15. Install win32yank (for WSL ONLY):
+    - choco install win32yank
