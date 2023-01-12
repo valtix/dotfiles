@@ -30,16 +30,16 @@ window:
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
   dimensions:
-    columns: 200
-    lines: 80
+    columns: 160
+    lines: 55
 
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
   position:
-    x: 2100
-    y: 400
+    x: 1300
+    y: 250
 
   # Window padding (changes require restart)
   #
@@ -155,7 +155,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 13.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -432,7 +432,7 @@ cursor:
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 #shell:
-#  program: /bin/bash
+#  program: ubuntu
 #  args:
 #    - --login
 
