@@ -1,13 +1,13 @@
 -- auto install packer if not installed
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
-    vim.cmd([[packadd packer.nvim]])
-    return true
-  end
-  return false
+	local fn = vim.fn
+	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+	if fn.empty(fn.glob(install_path)) > 0 then
+		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+		vim.cmd([[packadd packer.nvim]])
+		return true
+	end
+	return false
 end
 local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
@@ -23,7 +23,7 @@ vim.cmd([[
 -- import packer safely
 local status, packer = pcall(require, "packer")
 if not status then
-  return
+	return
 end
 
 -- Have packer use a popup window
@@ -41,11 +41,10 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 
-  -- essential plugins
-  use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
-  use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
-	
-  use("nvim-lualine/lualine.nvim") -- Statusline
+	-- essential plugins
+	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
+	use("nvim-lualine/lualine.nvim") -- Statusline
 	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = {
@@ -77,7 +76,13 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- Configuration lsp servers
 
 	-- Configuring LSP
-	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- Enhanced lsp uis
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		config = function()
+			require("lspsaga").setup({})
+		end,
+	})
 	use("jose-elias-alvarez/typescript.nvim") -- Additional functionality for typescript server
 	use("onsails/lspkind.nvim") -- VSCode like icons for autocompletion
 
