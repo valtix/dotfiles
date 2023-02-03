@@ -27,16 +27,19 @@
 6. Install tree-sitter-cli: cargo install tree-sitter-cli
 7. Install node.js and npm via nvm (https://github.com/nvm-sh/nvm#installation-and-update):
    - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+   - exit shell
    - verify that it worked by: nvm --version
    - nvm install --lts
+   - nvm alias default node
    - verify that it works by:
    - node --version
    - npm -- version
 8. Install zip and unzip
-   - sudo apt-get install zip unzip -y
+   - sudo apt-get install zip unzip -y (only for windows)
 9. Install Neovim
    - you will need to download the appimage and proceed from there.
    - look at: https://github.com/neovim/neovim/wiki/Installing-Neovim
+   - scroll down to the Linux section and run the curl command to donwloand the appimage
    - make sure you use the ./nvim.appimage --appimage-extract process instead
 10. Windows WLS ONLY-- add file permissions between Linux and Windows in your ~/.profile file
 
