@@ -7,13 +7,14 @@
    - "copy the path for zsh (e.g., /bin/zsh)"
    - change shells by: chsh
    - enter the path (e.g., /bin/zsh)
+   - log out/log back in of Operating System
 2. Install python pip
    - sudo apt install python3-pip
 3. Install Dotbot
    - pip3 install dotbot
    - delete the .zshrc file
    - add dotobot to path in the current session only (given that you cannot add it to the .zshrc file yet)
-     by export command. It will give you the path in the comments after it's installed! Example -- export PATH="/home/valitx/.local/bin:$PATH"
+     by export command. It will give you the path in the comments after it's installed! Example -- export PATH="/home/valti/.local/bin:$PATH"
 4. Git clone .dotfiles from github
    - make sure you are in home directory
    - git clone https://github.com/valtix/.dotfiles.git
