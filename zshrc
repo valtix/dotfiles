@@ -26,6 +26,10 @@ export PATH=/home/valti/.cargo/bin:$PATH
 # for WSL: it removes the highlighting of folders:
 LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
 
+# please remove from laptop devices
+export SPARK_HOME=/opt/spark 
+export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+
 
 ################################################################################################################
 #####################################################    ANTIGEN     ###########################################
