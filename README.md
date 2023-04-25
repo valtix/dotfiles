@@ -95,3 +95,6 @@ window:
 
 16. Install Alacritty (Linux Version):
     - sudo apt install alacritty
+
+17. Install tmux:
+    - sudo apt-get install tmux

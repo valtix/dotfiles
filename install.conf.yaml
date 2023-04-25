@@ -19,6 +19,9 @@
     ~/.config/nvim:
       path: nvim
 
+    ~/.config/lvim:
+      path: lvim
+
     ~/.config/alacritty:
       path: alacritty
 
