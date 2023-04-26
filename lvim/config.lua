@@ -74,8 +74,12 @@ keymap("v", "p", '"_dP', default_opts)
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 
--- -- Change theme settings
-lvim.colorscheme = "default"
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+-------------------- Change theme settings -------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+lvim.colorscheme = "slate"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
