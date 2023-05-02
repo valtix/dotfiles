@@ -15,38 +15,6 @@ endif
 " Theme
 syntax enable
 
-	" Integrated Terminal
-
-" open new split panes to right and below
-set splitright
-set splitbelow
-
-" turn terminal to normal mode with escape
-tnoremap <Esc> <C-\><C-n>
-
-" start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-
-" open terminal with ctrl+n
-function! OpenTerminal()
-  split term://bash
-  resize 10
-endfunction
-nnoremap <c-n> :call OpenTerminal()<CR>
-
-
-	" Switching between panels 
-
-" use alt+hjkl to move between split/vsplit panels
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -62,10 +30,9 @@ call plug#begin("~/.vim/plugged")
   Plug 'dracula/vim', { 'as': 'dracula' } 	" https://draculatheme.com/vim
 
 
-  Plug 'scrooloose/nerdtree'
   Plug 'ryanoasis/vim-devicons'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   
   " Requires node.js installation:
   Plug 'neoclide/coc.nvim', {'branch': 'release'} 
@@ -77,6 +44,8 @@ call plug#begin("~/.vim/plugged")
    
   Plug 'nvim-tree/nvim-web-devicons'
   Plug 'nvim-lualine/lualine.nvim'
+  Plug 'lewis6991/gitsigns.nvim'
+  Plug 'nvim-tree/nvim-tree.lua'
 
 call plug#end()
 
@@ -90,23 +59,6 @@ call plug#end()
 
 				" dracula/vim
 colorscheme dracula
-
-
-
-
-				" scrooloose/nerdtree
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
-
-" Automaticaly close nvim if NERDTree is only thing left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Toggle
-nnoremap <silent> <A-b> :NERDTreeToggle<CR>
-
-
 
 
     				" junegun/fzf
@@ -165,4 +117,6 @@ let g:user_emmet_settings = {
 
 lua require('plugins.nvim-lualine')
 lua require('plugins.coc-vim')
+lua require('plugins.nvim-tree')
+lua require('plugins.gitsigns')
 lua require('keymaps')
