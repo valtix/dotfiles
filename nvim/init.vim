@@ -118,5 +118,4 @@ let g:user_emmet_settings = {
 lua require('plugins.nvim-lualine')
 lua require('plugins.coc-vim')
 lua require('plugins.nvim-tree')
-lua require('plugins.gitsigns')
 lua require('keymaps')
