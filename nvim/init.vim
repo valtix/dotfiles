@@ -1,36 +1,16 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""" LUA MODULES 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-lua require('user.options')
-lua require('user.keymaps')
-lua require('user.plugins.nvim-lualine')
-lua require('user.plugins.coc-vim')
-lua require('user.plugins.nvim-tree')
-
-
-" Theme
-syntax enable
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""" Plugin Manager
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin("~/.vim/plugged")
 
-  " Plugin Section
 
   " Color Schemes
   Plug 'dracula/vim', { 'as': 'dracula' } 	" https://draculatheme.com/vim
 
 
   Plug 'ryanoasis/vim-devicons'
-  Plug 'junegunn/fzf.vim'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   
   " Requires node.js installation:
   Plug 'neoclide/coc.nvim', {'branch': 'release'} 
@@ -59,26 +39,7 @@ call plug#end()
 colorscheme dracula
 
 
-    				" junegun/fzf
-
-" To search for a file, press Ctrl+P  
-" search for the file you’re looking for, and press:
-" 	1. CTRL+T to open it in a new tab.
-" 	2. CTRL+S to open below (split view)
-" 	3. CTRL+T to open to the side (vertical split)
-" 	4.Enter to open it in the currently selected panel
-nnoremap <C-p> :FZF<CR>
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
-
-" ignores node_modules and uses silver searcher instead (https://github.com/ggreer/the_silver_searcher)
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-
-
-				" mattn/emmet-Vim 
+			" mattn/emmet-Vim 
 
 " redefine trigger Key
 let g:user_emmet_leader_key=','
@@ -104,3 +65,17 @@ let g:user_emmet_settings = {
 \    },
 \  },
 \}
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""" LUA Modules
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+lua require('user.options')
+lua require('user.keymaps')
+lua require('user.plugins.nvim-lualine')
+lua require('user.plugins.coc-vim')
+lua require('user.plugins.nvim-tree')
+

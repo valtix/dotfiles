@@ -35,4 +35,4 @@ vim.opt.shortmess:append "c"
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
-						-- :help options (typing this into your vim will get you the documentation)
+                        						-- :help options (typing this into your vim will get you the documentation)
