@@ -25,6 +25,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'nvim-tree/nvim-tree.lua'
 
+  Plug 'windwp/nvim-autopairs'
+
 call plug#end()
 
 
@@ -78,4 +80,4 @@ lua require('user.keymaps')
 lua require('user.plugins.nvim-lualine')
 lua require('user.plugins.coc-vim')
 lua require('user.plugins.nvim-tree')
-
+lua require('user.plugins.nvim-autopairs')
