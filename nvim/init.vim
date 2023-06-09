@@ -6,26 +6,28 @@
 call plug#begin("~/.vim/plugged")
 
 
-  " Color Schemes
-  Plug 'dracula/vim', { 'as': 'dracula' } 	" https://draculatheme.com/vim
+    " Color Schemes
 
+    Plug 'dracula/vim', { 'as': 'dracula' } 	" https://draculatheme.com/vim
+    Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
+    " End Color schemes 
 
-  Plug 'ryanoasis/vim-devicons'
+    Plug 'ryanoasis/vim-devicons'
   
-  " Requires node.js installation:
-  Plug 'neoclide/coc.nvim', {'branch': 'release'} 
-  let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+    " Requires node.js installation:
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+    let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
 
-  Plug 'leafgarland/typescript-vim'
-  Plug 'peitalin/vim-jsx-typescript'
-  Plug 'mattn/emmet-vim'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'peitalin/vim-jsx-typescript'
+    Plug 'mattn/emmet-vim'
    
-  Plug 'nvim-tree/nvim-web-devicons'
-  Plug 'nvim-lualine/lualine.nvim'
-  Plug 'lewis6991/gitsigns.nvim'
-  Plug 'nvim-tree/nvim-tree.lua'
+    Plug 'nvim-tree/nvim-web-devicons'
+    Plug 'nvim-lualine/lualine.nvim'
+    Plug 'lewis6991/gitsigns.nvim'
+    Plug 'nvim-tree/nvim-tree.lua'
 
-  Plug 'windwp/nvim-autopairs'
+    Plug 'windwp/nvim-autopairs'
 
 call plug#end()
 
@@ -38,7 +40,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 				" dracula/vim
-colorscheme dracula
+colorscheme nordic 
 
 
 			" mattn/emmet-Vim 
