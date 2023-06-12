@@ -10,6 +10,7 @@ call plug#begin("~/.vim/plugged")
 
     Plug 'dracula/vim', { 'as': 'dracula' } 	" https://draculatheme.com/vim
     Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
+    
     " End Color schemes 
 
     Plug 'ryanoasis/vim-devicons'
@@ -28,6 +29,9 @@ call plug#begin("~/.vim/plugged")
     Plug 'nvim-tree/nvim-tree.lua'
 
     Plug 'windwp/nvim-autopairs'
+    Plug 'lewis6991/gitsigns.nvim'
+    Plug 'romgrk/barbar.nvim'
+    Plug 'lukas-reineke/indent-blankline.nvim'
 
 call plug#end()
 
@@ -83,3 +87,5 @@ lua require('user.plugins.nvim-lualine')
 lua require('user.plugins.coc-vim')
 lua require('user.plugins.nvim-tree')
 lua require('user.plugins.nvim-autopairs')
+lua require('user.plugins.indent-blankline')
+lua require('user.plugins.barbar-nvim')
