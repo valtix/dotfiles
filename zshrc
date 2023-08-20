@@ -1,3 +1,12 @@
+# stop these errors https://github.com/asdf-vm/asdf/issues/266
+# & make it fast https://carlosbecker.com/posts/speeding-up-zsh/
+autoload -Uz compinit 
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+    compinit;
+else
+    compinit -C;
+fi;
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -10,63 +19,39 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-# Node Config:
-export NVM_DIR=~/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # tree-sitter-cli
 export PATH=/home/valti/.cargo/bin:$PATH
 
+# Add default node to path
+export PATH=~/.nvm/versions/node/v18.16.0/bin:$PATH
 
-# for WSL: it removes the highlighting of folders:
-LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
+# Load NVM
+export NVM_DIR=~/.nvm
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh" --no-use
 
-# please remove from laptop devices
-export SPARK_HOME=/opt/spark 
-export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
- 
-# path for Lunar Vim 
-export PATH=$HOME/.local/bin:$PATH
 
+# Dotbot
+export PATH=/Users/ivaltier/Library/Python/3.9/bin:$PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+source "$HOME/.zsh/spaceship/spaceship.zsh"
 
 ################################################################################################################
-#####################################################    ANTIGEN     ###########################################
+###########################################    PLUGIN MANAGER: ANTIDOTE     ####################################
 ################################################################################################################
-source $HOME/.dotfiles/antigen.zsh
+# source antidote
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 
-# Use Oh-My-Zsh
-antigen use oh-my-zsh
+# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+antidote load
 
-# Set theme
-antigen theme agnoster
-
-# Set plugins (plugins not part of Oh-My-Zsh can be installed using githubusername/repo)
-antigen bundle git
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions
-antigen bundle z-shell/F-Sy-H --branch=main
-antigen bundle marlonrichert/zsh-autocomplete@main
-
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    antigen bundle osx
-fi
-
-# Apply changes
-antigen apply
-
-
-
+# to install a plugin simply use antidote install name_of_plugin
 
 ################################################################################################################
 #####################################################    ALIASES     ###########################################
 ################################################################################################################
-source $HOME/.dotfiles/antigen.zsh
 alias vim="nvim"
 alias lt="exa --tree --level=2 -a --icons"
 alias l="exa --tree --level=1 --icons"
@@ -74,4 +59,3 @@ alias la="exa --header --long --all"
 
 alias lh="cd ~"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

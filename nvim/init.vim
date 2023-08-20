@@ -32,7 +32,8 @@ call plug#begin("~/.vim/plugged")
     Plug 'lewis6991/gitsigns.nvim'
     Plug 'romgrk/barbar.nvim'
     Plug 'lukas-reineke/indent-blankline.nvim'
-
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}     " for syntax highlighting
+    Plug 'pangloss/vim-javascript'          " for awesome color js highlighting
 call plug#end()
 
 
@@ -44,7 +45,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 				" dracula/vim
-colorscheme nordic 
+colorscheme habamax
 
 
 			" mattn/emmet-Vim 
