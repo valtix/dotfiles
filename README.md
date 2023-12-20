@@ -2,7 +2,8 @@
 
 1. Install ZSH
    - sudo apt update
-   - sudo apt-get install zsh
+   - sudo apt upgrade
+   - sudo apt install zsh
    - cat /etc/shells
    - "copy the path for zsh (e.g., /bin/zsh)"
    - change shells by: chsh
