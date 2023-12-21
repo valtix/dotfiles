@@ -1,13 +1,8 @@
 # Order of installations (linux Version)
 
-1. Install ZSH
-   - sudo apt update
-   - sudo apt upgrade
-   - sudo apt install zsh
-   - cat /etc/shells
-   - "copy the path for zsh (e.g., /bin/zsh)"
-   - change shells by: chsh
-   - enter the path (e.g., /bin/zsh)
+1. Install FISH
+   - add repositories by following this link: https://launchpad.net/~fish-shell/+archive/ubuntu/release-3
+   - set as default shell by: chsh -s /usr/bin/fish
    - log out/log back in of Operating System
 2. Install python pip
    - sudo apt install python3-pip
