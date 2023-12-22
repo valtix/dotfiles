@@ -14,7 +14,7 @@
    - Add to FISH path: set -U fish_user_paths $HOME/.cargo/env $fish_user_paths
    - Exit shell and log back in
 4. Install EXA:
-   - run command: cargo install exa
+   - sudo apt install exa
 5. Install python pip
    - sudo apt install python3-pip
 
