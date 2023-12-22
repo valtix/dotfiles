@@ -4,8 +4,21 @@
    - add repositories by following this link: https://launchpad.net/~fish-shell/+archive/ubuntu/release-3
    - set as default shell by: chsh -s /usr/bin/fish
    - log out/log back in of Operating System
-2. Install python pip
+   - run fish_config for changing themes/prompt options
+2. Install Helix editor
+   - Go to: https://docs.helix-editor.com/install.html
+   - Remember: to use hx instead of vim when editing a file in the terminal!
+3. Install Rust & Cargo
+   - Go to: https://doc.rust-lang.org/cargo/getting-started/installation.html
+   - Exit shell and log back in
+   - Add to FISH path: set -U fish_user_paths $HOME/.cargo/env $fish_user_paths
+   - Exit shell and log back in
+4. Install EXA:
+   - run command: cargo install exa
+5. Install python pip
    - sudo apt install python3-pip
+
+##### in progress
 3. Install Dotbot
    - pip3 install dotbot
    - delete the .zshrc file
@@ -19,11 +32,6 @@
    - dotbot -c install.conf.yaml
    - make sure you add the dotbot path to the zshrc file!
 6. Install antidote: https://github.com/mattmc3/antidote 
-7. Install exa via cargo
-   - run: curl https://sh.rustup.rs -sSf | sh
-   - Look at the following link for documentation: https://doc.rust-lang.org/cargo/getting-started/installation.html
-   - Exit shell and log back in
-   - cargo install exa
 8. Install tree-sitter-cli: cargo install tree-sitter-cli
 9. Install node.js and npm via nvm (https://github.com/nvm-sh/nvm#installation-and-update):
    - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
