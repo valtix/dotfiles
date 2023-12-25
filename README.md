@@ -17,20 +17,17 @@
    - sudo apt install exa
 5. Install python pip
    - sudo apt install python3-pip
-
-##### in progress
-3. Install Dotbot
+6. Install Dotbot
    - pip3 install dotbot
-   - delete the .zshrc file
-   - add dotobot to path in the current session only (given that you cannot add it to the .zshrc file yet)
-     by export command. It will give you the path in the comments after it's installed!
-     Example -- export PATH="/home/valti/.local/bin:$PATH"
-4. Git clone .dotfiles from github
+   - add dotobot to path: set -U fish_user_paths $HOME/.local/bin $fish_user_paths
+   - Git clone .dotfiles from github
    - make sure you are in home directory
    - git clone https://github.com/valtix/.dotfiles.git
    - cd .dotfiles
    - dotbot -c install.conf.yaml
    - make sure you add the dotbot path to the zshrc file!
+
+######### in progress #####################
 6. Install antidote: https://github.com/mattmc3/antidote 
 8. Install tree-sitter-cli: cargo install tree-sitter-cli
 9. Install node.js and npm via nvm (https://github.com/nvm-sh/nvm#installation-and-update):
@@ -42,11 +39,6 @@
    - verify that it works by:
    - node --version
    - npm -- version
-10. Install Neovim
-   - you will need to download the appimage and proceed from there.
-   - look at: https://github.com/neovim/neovim/wiki/Installing-Neovim
-   - scroll down to the Linux section and run the curl command to donwloand the appimage
-   - make sure you use the ./nvim.appimage --appimage-extract process instead
 11. Install Hack Nerd Fonts (https://www.nerdfonts.com/font-downloads)
     - On windows unzip the file and highlight all fonts and right click -> install
     - On linux unzip -> double click -> and you should see an option to install. You might have to google it if this is not the case
