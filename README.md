@@ -8,26 +8,27 @@
 2. Install Helix editor
    - Go to: https://docs.helix-editor.com/install.html
    - Remember: to use hx instead of vim when editing a file in the terminal!
+3. Install EXA:
+   - sudo apt install exa
+4. Install python pip
+   - sudo apt install python3-pip
+5. Install Dotbot
+   - pip3 install dotbot
+   - add dotobot to path: set -U fish_user_paths $HOME/.local/bin $fish_user_paths
+   - Go to your github page and copy the https link to the dotfiles repository
+   - In your terminal, make sure you are in the home directory
+   - Enter the following command in the terminal: git clone https://github.com/valtix/.dotfiles.git (or whatever the link happens to be)
+   - cd into your new dotfiles folder
+   - run the terminal command: dotbot -c install.conf.yaml
+
+######### in progress #####################
+
 3. Install Rust & Cargo
    - Go to: https://doc.rust-lang.org/cargo/getting-started/installation.html
    - Exit shell and log back in
    - Add to FISH path: set -U fish_user_paths $HOME/.cargo/env $fish_user_paths
    - Exit shell and log back in
-4. Install EXA:
-   - sudo apt install exa
-5. Install python pip
-   - sudo apt install python3-pip
-6. Install Dotbot
-   - pip3 install dotbot
-   - add dotobot to path: set -U fish_user_paths $HOME/.local/bin $fish_user_paths
-   - Git clone .dotfiles from github
-   - make sure you are in home directory
-   - git clone https://github.com/valtix/.dotfiles.git
-   - cd .dotfiles
-   - dotbot -c install.conf.yaml
-   - make sure you add the dotbot path to the zshrc file!
 
-######### in progress #####################
 6. Install antidote: https://github.com/mattmc3/antidote 
 8. Install tree-sitter-cli: cargo install tree-sitter-cli
 9. Install node.js and npm via nvm (https://github.com/nvm-sh/nvm#installation-and-update):
