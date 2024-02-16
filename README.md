@@ -36,8 +36,9 @@ chsh -s $(which fish)
    - Remember: to use hx instead of vim when editing a file in the terminal!
    - Install HTML language-server:npm i -g vscode-langservers-extracted (https://github.com/hrsh7th/vscode-langservers-extracted)
    - Install javascript language-server: npm install -g typescript-language-server typescript (https://github.com/typescript-language-server/typescript-language-server)  
-9. Install EXA:
-   - sudo apt install exa
+9. Install EZA (https://the.exa.website/):
+   - Linux: ```sudo apt install exa```
+   - Mac OS: ```brew install eza```
 10. Install python pip
    - sudo apt install python3-pip
 11. Install Dotbot
@@ -51,11 +52,13 @@ chsh -s $(which fish)
 12. Install live-server:
     - npm install -g live-server
 13. Install tmux:
-    - sudo apt-get install tmux
+    - Linux: ```sudo apt-get install tmux```
+    - Mac OS: ```brew install tmux```
 14. Install Rust & Cargo
     - Go to: https://doc.rust-lang.org/cargo/getting-started/installation.html
     - Exit shell and log back in
-    - Add to FISH path: set -U fish_user_paths $HOME/.cargo/env $fish_user_paths
+    - Linux: add to FISH path ```set -U fish_user_paths $HOME/.cargo/env $fish_user_paths```
+    - Mac OS: add to FISH path ```set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths``` 
     - Exit shell and log back in
 15. Install Hack Nerd Fonts (https://www.nerdfonts.com/font-downloads)
     - On windows unzip the file and highlight all fonts and right click -> install
