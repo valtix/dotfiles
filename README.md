@@ -63,6 +63,9 @@ chsh -s $(which fish)
 15. Install Hack Nerd Fonts (https://www.nerdfonts.com/font-downloads)
     - On windows unzip the file and highlight all fonts and right click -> install
     - On linux unzip -> double click -> and you should see an option to install. You might have to google it if this is not the case
+16. Installing neovim
+    - Go to https://github.com/neovim/neovim/blob/master/INSTALL.md
+    - Follow the instructions under the AppImage ("universal" Linux package) section
 
 ######### in progress #####################
 
